@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: #f4f4f4;
+}
+
+.background{
+    height: 100vh;
+}
+.gameContainer {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+  text-transform: capitalize;
+  margin: auto;
+  padding: 50px;
+  
+ 
+}
+.gameInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: repeat(3, 22vh);
+  grid-template-rows: repeat(3, 20vh);
+  
+}
+
+
+.box {
+  display: flex;
+  border: 2px solid black;
+  font-size: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+.box:hover {
+  cursor: pointer;
+  background: hsl(0, 0%, 98%);
+}
+
+/* utility classes */
+
+.bl {
+  border-left: 0;
+}
+.bt {
+  border-top: 0;
+}
+.br {
+  border-right: none;
+}
+.bb {
+  border-bottom: none;
+}
+.info {
+  margin: 10px 0;
+  display: inline-block;
+  font-size: 30px;
+}
+.btn {
+  background: rgb(255, 6, 6);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(220, 27, 27);
+}
+
+@media screen and (max-width: 1200px) {
+  .gameContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Container {
+  display: grid;
+  grid-template-columns: repeat(3, 20vh);
+  grid-template-rows: repeat(3, 20vh);
+  
+}
+
+}
+
+@media screen and (max-width: 1080px) {
+.gameContainer{
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+.turn-display{
+    flex-direction: column;
+}
+  .Container {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, vh);
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    /* margin: auto; */
+
+  }
+  .box{
+    font-size: 8vh;
+    /* background-color: rgb(191, 146, 191); */
+  }
+}
